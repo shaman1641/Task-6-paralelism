@@ -107,5 +107,14 @@ int main(int argc, char const *argv[]) {
 
     std::cout << "time: " << time_s << " error: " << error << " iteration: " << iter << std::endl;
 
+    if (N == 13 || N == 10) {
+        for (size_t i = 0; i < N; i++) {
+            for (size_t j = 0; j < N; j++) {
+                std::cout << A.arr[i * N + j] << ' ';
+            }
+            std::cout << std::endl;
+        }
+    }
+
     return 0;
 }
