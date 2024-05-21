@@ -40,11 +40,11 @@ int main(int argc, char const *argv[]){
     ;
     opt::variables_map vm;
     opt::store(opt::parse_command_line(argc, argv, desc), vm);
-    opt::notify(vm);
     if (vm.count("help")) {
         std::cout << desc << "\n";
         return 1;
     }
+    opt::notify(vm);
 
     int N = vm["cellsCount"].as<int>();
     double accuracy = vm["accuracy"].as<double>();
